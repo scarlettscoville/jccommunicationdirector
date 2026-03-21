@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Performance Task — Katherine Scarlett Scoville</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f7f5f2; color: #1c1c1c; font-family: 'Inter', sans-serif; font-weight: 400; }
+
+  header {
+    background: #fff; border-bottom: 3px solid #6b3fa0;
+    padding: 1.2rem 3rem; display: flex; align-items: center; justify-content: space-between;
+  }
+  .back-link {
+    font-size: 0.92rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; color: #6b3fa0; font-weight: 500;
+  }
+  .back-link:hover { color: #5a3188; }
+  .header-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; }
+  .header-name em { font-style: italic; color: #c89a2e; }
+
+  main { max-width: 1000px; margin: 3rem auto; padding: 0 3rem; }
+
+  .page-eyebrow {
+    font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #8a8680; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .page-eyebrow::before { content: ''; width: 16px; height: 1px; background: #c89a2e; display: block; }
+  .page-heading {
+    font-family: 'Playfair Display', serif; font-size: 2.4rem;
+    font-weight: 400; line-height: 1.15; margin-bottom: 0.5rem;
+  }
+  .page-heading em { font-style: italic; color: #c89a2e; }
+  .page-sub {
+    font-size: 0.92rem; color: #6b3fa0; letter-spacing: 0.06em;
+    text-transform: uppercase; font-weight: 500; margin-bottom: 2.5rem;
+  }
+
+  /* ACTION BAR */
+  .action-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 1.5rem; flex-wrap: wrap;
+    padding: 1.2rem 1.8rem;
+    background: #fff; border: 1px solid #e8e4de;
+    border-top: 2px solid #6b3fa0;
+    margin-bottom: 1.5rem;
+  }
+  .action-bar-desc {
+    font-size: 1rem; color: #6a6560; line-height: 1.6;
+  }
+  .download-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 0.75rem 1.8rem;
+    background: #6b3fa0; color: #fff;
+    text-decoration: none; font-size: 0.92rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 500; flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .download-btn:hover { background: #5a3188; }
+  .download-btn.gold { background: #c89a2e; }
+  .download-btn.gold:hover { background: #a87e22; }
+
+  /* PDF EMBED */
+  .pdf-container {
+    background: #fff;
+    border: 1px solid #e8e4de;
+    margin-bottom: 3rem;
+  }
+  .pdf-embed {
+    width: 100%;
+    height: 900px;
+    border: none;
+    display: block;
+  }
+  .pdf-placeholder {
+    height: 500px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 1rem;
+    background: #f7f5f2;
+    border: 2px dashed #e8e4de;
+    text-align: center; padding: 2rem;
+  }
+  .pdf-placeholder-icon { font-size: 3rem; opacity: 0.3; }
+  .pdf-placeholder-text { font-size: 1.05rem; color: #8a8680; line-height: 1.8; }
+  .pdf-placeholder-text strong { color: #6b3fa0; font-weight: 500; }
+
+  footer {
+    border-top: 1px solid #e8e4de; background: #fff; padding: 1.2rem 3rem; margin-top: 2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.92rem; color: #8a8680; flex-wrap: wrap; gap: 1rem;
+  }
+  footer a { color: #c89a2e; text-decoration: none; }
+
+  @media (max-width: 700px) {
+    main { padding: 0 1.5rem; }
+    header, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .pdf-embed { height: 600px; }
+    .action-bar { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back-link">← Back to Gallery</a>
+  <span class="header-name">Katherine <em>Scarlett</em> Scoville</span>
+</header>
+
+<main>
+  <p class="page-eyebrow">Communications Director Application · Jones County Schools</p>
+  <h1 class="page-heading">Performance Task <em>Document</em></h1>
+  <p class="page-sub">Strategic Communications Plan &amp; Campaign Materials</p>
+
+  <div class="action-bar">
+    <p class="action-bar-desc">Read the full performance task below, or download a copy for your records.</p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <a href="performance-task.pdf" download class="download-btn">⬇ Download PDF</a>
+    </div>
+  </div>
+
+  <div class="pdf-container">
+    <!-- When performance-task.pdf is added to the folder, it will display here automatically -->
+    <object data="performance-task.pdf" type="application/pdf" class="pdf-embed">
+      <div class="pdf-placeholder">
+        <span class="pdf-placeholder-icon">📄</span>
+        <p class="pdf-placeholder-text">
+          <strong>Performance task PDF coming soon.</strong><br>
+          Export your document as a PDF, rename it <strong>performance-task.pdf</strong>,<br>
+          and place it in the same folder as these HTML files.
+        </p>
+      </div>
+    </object>
+  </div>
+
+</main>
+
+<footer>
+  <span>Katherine Scarlett Scoville &mdash; <a href="mailto:scarlettscoville@gmail.com">scarlettscoville@gmail.com</a></span>
+  <a href="index.html">← Return to Gallery</a>
+</footer>
+
+</body>
+</html>
