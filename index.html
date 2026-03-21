@@ -235,10 +235,25 @@
   footer a:hover { text-decoration: underline; }
 
   @media (max-width: 700px) {
-    header, .intro, main, footer, .nav-tabs { padding-left: 1.5rem; padding-right: 1.5rem; }
-    .countdown-grid { grid-template-columns: 1fr; }
+    header, .intro, main, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+    header { flex-direction: column; align-items: flex-start; gap: 1rem; padding-top: 1.2rem; padding-bottom: 1.2rem; }
+    .header-name { font-size: 1.3rem; }
+    .header-context { font-size: 0.78rem; letter-spacing: 0.06em; }
     .header-right { text-align: left; }
+    .header-campaign-label { font-size: 0.78rem; }
+    .header-campaign-name { font-size: 0.95rem; }
+    .intro { flex-direction: column; align-items: flex-start; padding: 1rem 1.2rem; gap: 1rem; }
+    .intro-text { font-size: 0.9rem; max-width: 100%; }
+    .intro-tags { gap: 0.4rem; }
+    .tag { font-size: 0.78rem; padding: 0.2rem 0.5rem; }
+    .nav-tabs { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; display: flex; flex-wrap: nowrap; }
+    .nav-tab { font-size: 0.78rem; padding: 0.85rem 1rem; letter-spacing: 0.06em; flex-shrink: 0; }
+    .countdown-grid { grid-template-columns: 1fr; }
     .photo-callout { flex-direction: column; }
+    .card-title { font-size: 0.95rem; }
+    .card-sub { font-size: 0.82rem; }
+    .view-btn { font-size: 0.78rem; padding: 0.3rem 0.7rem; }
+    main { padding-top: 1.5rem; padding-bottom: 1.5rem; }
   }
 </style>
 </head>
@@ -423,6 +438,4 @@
 </main>
 
 <footer>
-  <span>Katherine Scarlett Scoville &mdash; <a href="mailto:katherine.scoville@jones.k12.ga.us">katherine.scoville@jones.k12.ga.us</a></span>
-  
-</footer>
+  <span>Katherine Scarlett Scoville &mdash; <a href="/cdn-cgi/l/email-protection#780b1b190a141d0c0c0b1b170e1114141d381f15191114561b1715"><span class="__cf_email__" data-cfemail="f0839391829c95848483939f86999c9c95b0979d91999cde939f9d">[email&#160;protected]</span></a> &mdash;
