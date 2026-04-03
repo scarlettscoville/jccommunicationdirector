@@ -8,16 +8,48 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #f7f5f2; color: #1c1c1c; font-family: 'Inter', sans-serif; font-weight: 400; }
-
+  /* HEADER */
   header {
     background: #fff; border-bottom: 3px solid #6b3fa0;
-    padding: 1.2rem 3rem; display: flex; align-items: center; justify-content: space-between;
+    padding: 2rem 3rem; display: flex; align-items: flex-end;
+    justify-content: space-between; gap: 2rem; flex-wrap: wrap;
   }
-  .back-link {
-    font-size: 0.92rem; letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none; color: #6b3fa0; font-weight: 500;
+  .header-name {
+    font-family: 'Playfair Display', serif; font-size: 1.6rem;
+    font-weight: 400; margin-bottom: 0.25rem;
   }
-  .back-link:hover { color: #5a3188; }
+  .header-name em { font-style: italic; color: #c89a2e; }
+  .header-context {
+    font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8a8680;
+  }
+  .header-right { text-align: right; }
+  .header-campaign-label {
+    font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #6b3fa0; margin-bottom: 0.2rem;
+  }
+  .header-campaign-name {
+    font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic;
+  }
+
+  /* NAV TABS */
+  .nav-tabs {
+    background: #fff; border-bottom: 1px solid #e8e4de;
+    padding: 0 3rem; display: flex; gap: 0;
+  }
+  .nav-tab {
+    padding: 1rem 1.5rem; font-size: 1.05rem; letter-spacing: 0.1em;
+    text-transform: uppercase; text-decoration: none; color: #8a8680;
+    font-weight: 400; border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .nav-tab:hover { color: #1c1c1c; border-bottom-color: #c89a2e; }
+  .nav-tab.active { color: #6b3fa0; border-bottom-color: #6b3fa0; font-weight: 500; }
+  .nav-tab .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #6b3fa0; flex-shrink: 0;
+  }
+
   .header-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; }
   .header-name em { font-style: italic; color: #c89a2e; }
 
@@ -95,6 +127,14 @@
   footer a { color: #c89a2e; text-decoration: none; }
 
   @media (max-width: 700px) {
+    .nav-tabs { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; display: flex; flex-wrap: nowrap; }
+    .nav-tab { font-size: 0.78rem; padding: 0.85rem 1rem; letter-spacing: 0.06em; flex-shrink: 0; }
+    header { flex-direction: column; align-items: flex-start; gap: 1rem; padding-top: 1.2rem; padding-bottom: 1.2rem; }
+    .header-name { font-size: 1.3rem; }
+    .header-context { font-size: 0.78rem; letter-spacing: 0.06em; }
+    .header-right { text-align: left; }
+    .header-campaign-label { font-size: 0.78rem; }
+    .header-campaign-name { font-size: 0.95rem; }
     main { padding: 0 1.5rem; }
     header, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
     .pdf-embed { height: 600px; }
@@ -105,9 +145,23 @@
 <body>
 
 <header>
-  <a href="index.html" class="back-link">← Back to Gallery</a>
-  <span class="header-name">Katherine <em>Scarlett</em> Scoville</span>
+  <div>
+    <h1 class="header-name">Katherine <em>Scarlett</em> Scoville</h1>
+    <p class="header-context">Communications Director Application · Jones County Schools</p>
+  </div>
+  <div class="header-right">
+    <p class="header-campaign-label">Performance Task</p>
+    <p class="header-campaign-name">Strategic Communications Plan</p>
+  </div>
 </header>
+
+<nav class="nav-tabs">
+  <a href="performance-task.html" class="nav-tab active"><span class="dot"></span> ✎ Performance Task</a>
+  <a href="index.html" class="nav-tab">Campaign Gallery</a>
+  <a href="emails.html" class="nav-tab">✉ Launch Emails</a>
+  <a href="teams.html" class="nav-tab">⬡ Teams Structure</a>
+  <a href="https://houndimages.pixieset.com" target="_blank" class="nav-tab">☆ School Photography</a>
+</nav>
 
 <main>
   <p class="page-eyebrow">Communications Director Application · Jones County Schools</p>
@@ -131,9 +185,4 @@
 </main>
 
 <footer>
-  <span>Katherine Scarlett Scoville &mdash; <a href="mailto:katherine.scoville@jones.k12.ga.us">katherine.scoville@jones.k12.ga.us</a></span>
-  <a href="index.html">← Return to Gallery</a>
-</footer>
-
-</body>
-</html>
+  <span>Katherine Scarlett Scoville &mdash; <a href="/cdn-cgi/l/email-protection#462d27322e23342f282368352529302f2a2a23062c29282335682d7774682127683335"><span class="__cf_email__" data-cfemail="0a616b7e626f7863646f2479
